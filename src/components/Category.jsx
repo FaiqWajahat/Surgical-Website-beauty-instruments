@@ -1,54 +1,67 @@
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import SectionHeading from './SectionHeading';
+import category01 from '@/Assets/Images/category-01.jpg'
+import category02 from '@/Assets/Images/category-02.jpeg'
+import category03 from '@/Assets/Images/category-03.jpg'
+import category04 from "../Assets/Images/category-04.jpg"
 
 const Category = () => {
-  const categories = [
-    {
-      id: 1,
-      title: "General Surgical",
-      description: "Comprehensive surgical procedures with state-of-the-art equipment and experienced surgeons.",
-    buttonText:"View Products",
-      image: "/hero-02.jpeg",
-      badge: "Medical"
-    },
-    {
-      id: 2,
-      title: "Beauty & Salon",
-      description: "Premium beauty treatments and salon services to enhance your natural radiance.",
-    buttonText:"View Products",
-       image: "/hero-04.jpg",
-      badge: "Beauty"
-    },
-    {
-      id: 3,
-      title: "Dental",
-      description: "Complete dental care with modern technology for your oral health and beautiful smile.",
-    buttonText:"View Products",
-        image: "/hero-03.jpeg",
-      badge: "Healthcare"
-    },
-    {
-      id: 4,
-      title: "Custom",
-      description: "Tailored solutions designed specifically for your unique needs and requirements.",
-    buttonText:"View Products",
-      image: "/hero-02.jpeg",
-      badge: "Bespoke"
-    }
-  ];
+  const router = useRouter();
+  const categories = 
+    [
+  {
+    id: 1,
+    title: "Surgical Instruments",
+    description: "Comprehensive range of scalpels, forceps, scissors, retractors, and other precision surgical tools.",
+    buttonText: "View Products",
+    image: category01,
+    badge: "Surgical",
+    href: "/Surgical-Instruments"
+  },
+  {
+    id: 2,
+    title: "Scissors",
+    description: "High-quality surgical and beauty scissors designed for accuracy, durability, and effortless cutting.",
+    buttonText: "View Products",
+    image: category02,
+    badge: "Scissors",
+    href: "/Scissors"
+  },
+  {
+    id: 3,
+    title: "Tweezers",
+    description: "Premium tweezers for surgical, dental, and beauty applications, crafted with precision and comfort in mind.",
+    buttonText: "View Products",
+    image: category03,
+    badge: "Tweezers",
+    href: "/Tweezers"
+  },
+  {
+    id: 4,
+    title: "Razors",
+    description: "Professional razors and blades engineered for clean, sharp, and reliable performance.",
+    buttonText: "View Products",
+    image: category04,
+    badge: "Razors",
+    href: "/Razors"
+  }
+];
+
 
   const handleCardClick = (category) => {
-    console.log(`Clicked on ${category.title}`);
+    router.push(category.href);
   };
 
-  const handleViewAllClick = () => {
-    console.log("View all categories clicked");
-  };
+
 
   // Card Component
   const CategoryCard = ({ category }) => (
     <motion.div
+  
       variants={cardVariants}
       className="flex justify-center"
     >
@@ -94,12 +107,12 @@ const Category = () => {
 
         {/* Image Side */}
         <figure className="w-[40%] h-full relative overflow-hidden">
-          <img
+          <Image
             src={category.image}
+            fill
             alt={category.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
           />
-         
         </figure>
 
         {/* Side Accent */}
@@ -122,59 +135,14 @@ const Category = () => {
     show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } }
   };
 
-  const buttonVariants = {
-    hidden: { opacity: 0, y: 50 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut", delay: 0.3 } }
-  };
+
 
   return (
-    <div className="lg:px-10 mx-auto px-4 py-12 relative">
-      {/* Header Section (unchanged as per request) */}
-      <motion.div
-        className="text-center mb-16"
-        initial={{ y: 50, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true }}
-      >
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4 tracking-tight">
-          {["What", "We","Offer"].map((word, index) => (
-            <motion.span
-              key={word}
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ 
-                duration: 0.8, 
-                delay: 0.4 + index * 0.1,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              }}
-              viewport={{ once: true }}
-              className="inline-block mr-4 bg-black bg-clip-text text-transparent"
-            >
-              {word}
-            </motion.span>
-          ))}
-        </h1>
-
-        <motion.div
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="h-1 w-48 mx-auto bg-gradient-to-r from-blue-600 to-indigo-600 rounded-md shadow-lg origin-center mb-6"
-        />
-
-        <motion.p
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1 }}
-          viewport={{ once: true }}
-          className="text-gray-600 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed"
-        >
-          We are a collective of dreamers, builders, and innovators, united by a passion for transforming ideas into reality.
-        </motion.p>
-      </motion.div>
-
+    <div className="md:px-16  mx-auto px-4 py-12 relative">
+      {/* Header Section */}
+      <SectionHeading first={"Produt"} second={"Categories"} paragraph={
+        "Discover our diverse product categories, each designed to meet the highest standards of quality and precision for medical and beauty professionals."
+      }/>
       {/* Categories Grid */}
       <motion.div 
         variants={containerVariants}
@@ -188,31 +156,8 @@ const Category = () => {
         ))}
       </motion.div>
 
-      {/* View All Button with Motion */}
-      <motion.div
-        variants={buttonVariants}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        className="text-center mt-10"
-      >
-        <button 
-          onClick={handleViewAllClick}
-          className="inline-flex items-center bg-gradient-to-r from-blue-700 to-blue-700 hover:from-blue-700 hover:to-blue-600 text-white font-semibold px-8 py-4 rounded-md shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden"
-        >
-          <span className="relative z-10 flex items-center">
-            View All Categories
-            <svg className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </span>
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        </button>
-      </motion.div>
-
-      {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-blue-100 rounded-md opacity-20 animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-16 h-16 bg-indigo-100 rounded-md opacity-30"></div>
+      
+      
     </div>
   );
 };

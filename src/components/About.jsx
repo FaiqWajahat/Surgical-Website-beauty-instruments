@@ -10,7 +10,7 @@ const About = () => {
   };
 
   return (
-    <section className="relative py-20 px-6 lg:px-10 ">
+    <section className="relative py-20 px-6 lg:px-10 bg-white ">
          <motion.div
           className="text-center mb-16"
           initial={{ y: 50, opacity: 0 }}
@@ -67,9 +67,9 @@ const About = () => {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <div className="relative w-full max-w-full h-[350px] rounded-md overflow-hidden shadow-2xl">
+          <div className="relative w-full max-w-full h-[500px] rounded-md overflow-hidden ">
             <Image
-              src="/about.jpg" 
+              src="/761637900_1228_pic_3.jpg" 
               alt="About us"
               fill
               className="object-cover hover:scale-105 transition-transform duration-500"

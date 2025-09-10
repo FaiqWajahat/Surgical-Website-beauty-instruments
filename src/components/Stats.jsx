@@ -15,10 +15,10 @@ const Stats = () => {
   const isInView = useInView(ref, { once: true }); // trigger only once
 
   return (
-    <section className="w-full bg-white my-16 flex items-center justify-center">
-      <div className="bg-blue-700 py-16 w-[95%] rounded-lg">
+    <section className="w-full bg-blue-950 my-16  py-20  flex items-center justify-center ">
+     
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div ref={ref} className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div ref={ref} className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-20 text-center">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -28,7 +28,7 @@ const Stats = () => {
                 viewport={{ once: true }}
                 className="flex flex-col items-center"
               >
-                <h2 className="text-4xl lg:text-5xl font-bold text-white">
+                <h2 className="text-4xl lg:text-6xl font-bold text-white">
                   {isInView ? (
                     <CountUp end={stat.number} duration={2.5} />
                   ) : (
@@ -36,14 +36,14 @@ const Stats = () => {
                   )}
                   {stat.suffix}
                 </h2>
-                <p className="mt-2 text-lg text-blue-100 font-medium">
+                <p className="mt-2 text-lg text-white font-medium">
                   {stat.label}
                 </p>
               </motion.div>
             ))}
           </div>
         </div>
-      </div>
+   
     </section>
   );
 };

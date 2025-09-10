@@ -19,7 +19,7 @@ export default function Hero() {
   }
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
+    <div className="relative max-h-screen py-16 px-8 w-full flex items-center lg:h-screen   justify-center overflow-hidden">
       {/* Background Video */}
       <video
         ref={videoRef}
@@ -29,22 +29,22 @@ export default function Hero() {
         muted
         playsInline
       >
-        <source src="https://videos.pexels.com/video-files/4488843/4488843-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+        <source src="https://cdn.create.vista.com/api/media/medium/101069624/stock-video-surgical-nurse-puts-medical-surgery-tools-on-table?token.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gray-900/70" />
+      <div className="absolute inset-0 bg-gray-950/70" />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl pt-20">
+      <div className="relative z-10 text-center px-6 max-w-4xl">
         <motion.h1
           className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Precision Instruments for{' '}
-          <span className="block text-blue-500">Healthcare & Professionals</span>
+          Premium Instruments for{" "}
+          <span className="block text-blue-500">Surgery & Care</span>
         </motion.h1>
 
         <motion.p
@@ -53,9 +53,11 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          From <span className="font-semibold text-blue-400">surgical tools</span> used in operating rooms to{' '}
-          <span className="font-semibold text-blue-400">barber & beauty essentials</span>, 
-          we deliver world-class quality trusted in <span className="font-semibold text-blue-400">150+ countries</span>.
+          From{" "}
+          <span className="font-semibold text-blue-400">surgical instruments</span> trusted in operating rooms to{" "}
+          <span className="font-semibold text-blue-400">scissors, tweezers, and razors</span> for professionals,  
+          we craft precision tools exported to{" "}
+          <span className="font-semibold text-blue-400">150+ countries worldwide</span>.
         </motion.p>
 
         {/* Buttons */}

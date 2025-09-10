@@ -19,10 +19,8 @@ const fadeInUp = {
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-700 text-white relative overflow-hidden">
-      {/* Decorative Gradient Circles */}
-      <div className="absolute top-0 left-0 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl"></div>
+    <footer className="bg-blue-950 text-white relative overflow-hidden">
+    
 
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
         
@@ -33,7 +31,7 @@ const Footer = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl font-bold mb-4">MediCare Instruments</h2>
+          <h2 className="text-2xl font-bold mb-4">TRIMZO ENTERPRISES</h2>
           <p className="text-blue-100 leading-relaxed mb-6">
             Delivering precision-crafted surgical, dental, and beauty instruments trusted by professionals worldwide.
           </p>
@@ -143,7 +141,7 @@ const Footer = () => {
         viewport={{ once: true }}
         className="border-t border-white/20 py-6 text-center text-blue-100 text-sm relative z-10"
       >
-        © {new Date().getFullYear()} MediCare Instruments. All rights reserved.
+        © {new Date().getFullYear()} Trimzo Enterprises. All rights reserved.
       </motion.div>
     </footer>
   )

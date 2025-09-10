@@ -5,6 +5,7 @@ import {
   Mail, Phone, MapPin, Send, Loader2, CheckCircle, 
   Building, Award, Users, Facebook, Twitter, Linkedin, Instagram 
 } from 'lucide-react'
+import SectionHeading from './SectionHeading'
 
 const ContactUs = () => {
   const [form, setForm] = useState({ 
@@ -30,9 +31,9 @@ const ContactUs = () => {
   }
 
   const contactInfo = [
-    { icon: Phone, title: "Phone", text: "+1 (555) 123-4567", subtext: "Sales & Support" },
-    { icon: Mail, title: "Email", text: "info@medicalinstruments.com", subtext: "24/7 Response" },
-    { icon: MapPin, title: "Address", text: "123 Medical Plaza, Healthcare District", subtext: "New York, NY 10001" },
+    { icon: Phone, title: "Phone", text: "+92 0337 7282060", subtext: "Sales & Support" },
+    { icon: Mail, title: "Email", text: "trimzoenterprises@gmail.com", subtext: "24/7 Response" },
+    { icon: MapPin, title: "Address", text: "Nai Basti, Post Office Gohad Pur Bonkan", subtext: "Sialkot,Pakistan" },
   ]
 
   const features = [
@@ -47,53 +48,12 @@ const ContactUs = () => {
   }
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-12 py-12 sm:py-20">
+    <section className="w-full px-4 sm:px-6 lg:px-16 py-12 sm:py-20">
      
      {/* Heading */}
-     <motion.div
-       className="text-center mb-16"
-       initial={{ y: 50, opacity: 0 }}
-       whileInView={{ y: 0, opacity: 1 }}
-       transition={{ duration: 0.8, ease: "easeOut" }}
-       viewport={{ once: true }}
-     >
-       <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4 tracking-tight">
-         {["Get", "In","Touch"].map((word, index) => (
-           <motion.span
-             key={word}
-             initial={{ y: 100, opacity: 0 }}
-             whileInView={{ y: 0, opacity: 1 }}
-             transition={{ 
-               duration: 0.8, 
-               delay: 0.4 + index * 0.1,
-               ease: [0.25, 0.46, 0.45, 0.94]
-             }}
-             viewport={{ once: true }}
-             className="inline-block mr-4 bg-black bg-clip-text text-transparent"
-           >
-             {word}
-           </motion.span>
-         ))}
-       </h1>
-
-       <motion.div
-         initial={{ scaleX: 0 }}
-         whileInView={{ scaleX: 1 }}
-         transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
-         viewport={{ once: true }}
-         className="h-1 w-48 mx-auto bg-gradient-to-r from-blue-600 to-indigo-600 rounded-md shadow-lg origin-center mb-6"
-       />
-
-       <motion.p
-         initial={{ y: 20, opacity: 0 }}
-         whileInView={{ y: 0, opacity: 1 }}
-         transition={{ duration: 0.6, delay: 1 }}
-         viewport={{ once: true }}
-         className="text-gray-600 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed"
-       >
-         We are a collective of dreamers, builders, and innovators, united by a passion for transforming ideas into reality.
-       </motion.p>
-     </motion.div>
+    <SectionHeading first={"Contact"} second={"Us"} paragraph={
+      "Have questions or need assistance? Our dedicated team is here to help you with all your medical and beauty instrument needs. Reach out to us today!"
+     }/>
 
      {/* Features */}
      <motion.div
@@ -112,7 +72,7 @@ const ContactUs = () => {
              whileInView="show"
              viewport={{ once: true }}
              transition={{ delay: i * 0.2 }}
-             className="flex items-center gap-3 sm:gap-4 bg-blue-600 p-4 rounded-md shadow-sm"
+             className="flex items-center gap-3 sm:gap-4 bg-blue-700 p-4 rounded-md shadow-sm"
            >
              <div className="p-2 sm:p-3 rounded-md bg-white text-blue-600">
                <feature.icon size={20} />
@@ -137,7 +97,7 @@ const ContactUs = () => {
          viewport={{ once: true }}
          className="lg:col-span-3"
        >
-         <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-2xl border border-blue-100">
+         <div className="bg-white p-6 sm:p-8 rounded-md shadow-2xl border border-blue-100">
            <div className="mb-6 sm:mb-8">
              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">Send us a Message</h3>
              <p className="text-gray-600 text-sm sm:text-base">Fill out the form below and we'll get back to you within 24 hours.</p>
@@ -248,7 +208,7 @@ const ContactUs = () => {
          viewport={{ once: true }}
          className="lg:col-span-2"
        >
-         <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-6 sm:p-8 rounded-2xl shadow-xl h-full flex flex-col justify-between">
+         <div className="bg-blue-700 text-white p-6 sm:p-8 rounded-md shadow-xl h-full flex flex-col justify-between">
            <div>
              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3">Get in Touch</h3>
              <p className="text-blue-100 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
@@ -285,7 +245,7 @@ const ContactUs = () => {
              initial="hidden"
              whileInView="show"
              viewport={{ once: true }}
-             className="flex items-center justify-center gap-4 sm:gap-6 mt-6"
+             className="flex items-center justify-center gap-4 sm:gap-6 mt-2"
            >
              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" 
                 className="p-2 sm:p-3 rounded-md bg-white/20 hover:bg-white text-white hover:text-blue-600 transition">

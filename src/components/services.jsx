@@ -2,6 +2,7 @@
 import React, { useRef } from 'react'
 import { motion, useScroll } from 'framer-motion'
 import { Wrench, BadgeCheck, Truck, Headphones } from 'lucide-react'
+import SectionHeading from './SectionHeading'
 
 export default function ServicesTimeline() {
   const ref = useRef(null)
@@ -27,7 +28,7 @@ export default function ServicesTimeline() {
       title: 'Custom Solutions',
       subtitle: 'Tailored Engineering',
       description:
-        'We collaborate closely with healthcare professionals, dentists, barbers, and beauty experts to design instruments that match exact specifications. Every product is meticulously engineered using premium-grade stainless steel.',
+        'We work closely with healthcare professionals, dentists, barbers, and beauty experts to create instruments that meet exact specifications. Every product is carefully designed and crafted from premium stainless steel.',
       icon: <Wrench className="h-8 w-8 text-white" />,
       color: 'bg-gradient-to-br from-blue-500 to-blue-700',
       borderColor: 'border-blue-500',
@@ -37,9 +38,9 @@ export default function ServicesTimeline() {
     {
       step: '02',
       title: 'Quality Assurance',
-      subtitle: 'Rigorous Testing Standards',
+      subtitle: 'Certified & Tested',
       description:
-        'Each instrument undergoes comprehensive multi-stage inspection protocols, maintaining certifications like ISO 13485, CE Mark, and FDA approvals.',
+        'Each instrument passes through rigorous inspection stages and meets international standards such as ISO 13485, CE Mark, and FDA certifications.',
       icon: <BadgeCheck className="h-8 w-8 text-white" />,
       color: 'bg-gradient-to-br from-blue-500 to-blue-700',
       borderColor: 'border-blue-500',
@@ -49,9 +50,9 @@ export default function ServicesTimeline() {
     {
       step: '03',
       title: 'Global Logistics',
-      subtitle: 'Worldwide Delivery Network',
+      subtitle: 'Worldwide Delivery',
       description:
-        'Our logistics infrastructure ensures secure delivery to over 150 countries, with real-time tracking and guaranteed punctuality.',
+        'We deliver to over 150 countries with a reliable logistics network, real-time tracking, and guaranteed on-time shipments.',
       icon: <Truck className="h-8 w-8 text-white" />,
       color: 'bg-gradient-to-br from-blue-500 to-blue-700',
       borderColor: 'border-blue-500',
@@ -63,7 +64,7 @@ export default function ServicesTimeline() {
       title: 'Ongoing Support',
       subtitle: 'Lifetime Partnership',
       description:
-        'We provide after-sales training, maintenance protocols, and rapid response support, building long-term trust with our clients.',
+        'Our clients receive continuous after-sales support, training, and maintenance assistance, ensuring long-term trust and collaboration.',
       icon: <Headphones className="h-8 w-8 text-white" />,
       color: 'bg-gradient-to-br from-blue-500 to-blue-700',
       borderColor: 'border-blue-500',
@@ -74,52 +75,9 @@ export default function ServicesTimeline() {
 
   return (
     <section className="py-24 bg-white relative overflow-hidden">
-    
-
-     <motion.div
-             className="text-center mb-16"
-             initial={{ y: 50, opacity: 0 }}
-             whileInView={{ y: 0, opacity: 1 }}
-             transition={{ duration: 0.8, ease: "easeOut" }}
-             viewport={{ once: true }}
-           >
-             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4 tracking-tight">
-               {["Explore", "Our","Process"].map((word, index) => (
-                 <motion.span
-                   key={word}
-                   initial={{ y: 100, opacity: 0 }}
-                   whileInView={{ y: 0, opacity: 1 }}
-                   transition={{ 
-                     duration: 0.8, 
-                     delay: 0.4 + index * 0.1,
-                     ease: [0.25, 0.46, 0.45, 0.94]
-                   }}
-                   viewport={{ once: true }}
-                   className="inline-block mr-4 bg-black bg-clip-text text-transparent"
-                 >
-                   {word}
-                 </motion.span>
-               ))}
-             </h1>
-     
-             <motion.div
-               initial={{ scaleX: 0 }}
-               whileInView={{ scaleX: 1 }}
-               transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
-               viewport={{ once: true }}
-               className="h-1 w-48 mx-auto bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full shadow-lg origin-center mb-6"
-             />
-     
-             <motion.p
-               initial={{ y: 20, opacity: 0 }}
-               whileInView={{ y: 0, opacity: 1 }}
-               transition={{ duration: 0.6, delay: 1 }}
-               viewport={{ once: true }}
-               className="text-gray-600 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed"
-             >
-               We are a collective of dreamers, builders, and innovators, united by a passion for transforming ideas into reality.
-             </motion.p>
-           </motion.div>
+      {/* Section Heading */}
+      <SectionHeading first={'Our'} second={'Process'} paragraph={
+        'A step-by-step approach to delivering precision, quality, and support for every client. From initial consultation to ongoing partnership, our process ensures your needs are met at every stage.'} />
       {/* Timeline */}
       <div ref={ref} className="relative max-w-6xl mx-auto px-6">
         {/* Vertical Line */}
@@ -146,19 +104,25 @@ export default function ServicesTimeline() {
                 idx % 2 === 0 ? 'lg:flex-row-reverse' : ''
               }`}
             >
-              {/* Content */}
+              {/* Content Card */}
               <motion.div
                 whileHover={{ scale: 1.02, y: -5 }}
-                className="bg-whiterounded-md shadow-lg hover:shadow-2xl transition-all duration-500 p-8 border border-gray-100 w-full lg:w-5/12"
+                className="bg-white rounded-md shadow-lg hover:shadow-2xl transition-all duration-500 p-8 border border-gray-100 w-full lg:w-5/12"
               >
                 <div className="flex items-center mb-4">
                   <div
-                    className={`w-12 h-12 ${service.bgLight} ${service.borderColor} border-2rounded-md flex items-center justify-center mr-4`}
+                    className={`w-12 h-12 ${service.bgLight} ${service.borderColor} border-2 rounded-md flex items-center justify-center mr-4`}
                   >
-                    <span className={`font-black text-lg ${service.textColor}`}>{service.step}</span>
+                    <span
+                      className={`font-black text-lg ${service.textColor}`}
+                    >
+                      {service.step}
+                    </span>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      {service.title}
+                    </h3>
                     <p
                       className={`text-sm font-semibold ${service.textColor} uppercase tracking-wider`}
                     >
@@ -166,7 +130,9 @@ export default function ServicesTimeline() {
                     </p>
                   </div>
                 </div>
-                <p className="text-gray-600 leading-relaxed text-base">{service.description}</p>
+                <p className="text-gray-600 leading-relaxed text-base">
+                  {service.description}
+                </p>
               </motion.div>
 
               {/* Center Icon */}
