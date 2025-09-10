@@ -180,7 +180,7 @@ export default function Navbar() {
                 <Phone className="size-3.5 " />
               </div>
               <a href="tel:+923146997979" className="text-md font-semibold">
-                +92 314 6997979
+                +92 337 7282060
               </a>
             </div>
           </div>
