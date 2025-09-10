@@ -327,7 +327,7 @@ export default function Navbar() {
         }`}
       >
         <div className="px-6 py-4 flex flex-col space-y-4">
-          {[{ name: 'Home', href: '/' }, { name: 'About', href: '/about' }].map((item) => (
+          {[{ name: 'Home', href: '/' }, { name: 'About', href: '/About' }].map((item) => (
             <Link
               key={item.name}
               href={item.href}
@@ -371,12 +371,24 @@ export default function Navbar() {
                         {it.name}
                       </Link>
                     ))}
+                    
                   </div>
                 )}
               </div>
             )
           })}
-
+{[ { name: 'Services', href: '/Services' }].map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className={`font-medium ${
+                pathname === item.href ? 'text-blue-700' : 'text-gray-700 hover:text-blue-700'
+              }`}
+              onClick={() => setMobileOpen(false)}
+            >
+              {item.name}
+            </Link>
+          ))}
           <Link
             href="/contact"
             className="mt-4 px-4 py-2 bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-md text-center"
