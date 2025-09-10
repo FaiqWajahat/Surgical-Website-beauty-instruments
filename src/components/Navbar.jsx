@@ -390,7 +390,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/contact"
+            href="/Contact"
             className="mt-4 px-4 py-2 bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-md text-center"
             onClick={() => setMobileOpen(false)}
           >
