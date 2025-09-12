@@ -1,14 +1,24 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import ProductCard from '@/components/ProductCard'
 import { usePathname } from 'next/navigation'
+import { productData } from '@/Assets/AllData'
+import { Loader2 } from 'lucide-react'
+
 const SubCategoryProducts = () => {
 
   const pathName = usePathname();
-  const categoryName= pathName.split("/")[1].replace("-"," ");
-  const subCategoryName= pathName.split("/")[2].replaceAll("-"," ");
-  
+  const categoryName = pathName.split("/")[1]?.replaceAll("-", " ") || "";
+  const subCategoryName = pathName.split("/")[2]?.replaceAll("-", " ") || "";
+  const [products, setProducts]=useState([])
+  console.log(products)
+
+useEffect(() => {
+const filteredProducts = productData.filter(v => v.subcategory.toLowerCase() === subCategoryName.toLowerCase());
+setProducts(filteredProducts??[]);
+
+}, [subCategoryName]);
   
 
   return (
@@ -41,15 +51,25 @@ const SubCategoryProducts = () => {
   </ul>
   </div>
 
-      <section className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-<ProductCard/>
-<ProductCard/>
-<ProductCard/>
-<ProductCard/>
-<ProductCard/>
-<ProductCard/>
+      {
+        products.length===0 ?
+        <p className='text-center flex justify-center items-center text-2xl font-semibold'>
+          <Loader2 className='animate-spin text-blue-700 h-12 w-12 min-h-screen' />
+          </p>:
+        <section className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+        {
+          products.map((v,id)=>{
+          return(
+            <ProductCard key={id} name={v.name} image={v.image} article={v.Articel} category={v.category}  />
+          )
+          
+          })
+        }
+
+
 
       </section>
+      }
     </div>
   )
 }

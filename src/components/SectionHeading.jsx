@@ -23,7 +23,7 @@ const SectionHeading = ({first, second , paragraph}) => {
           className="h-1 w-44 mx-auto bg-gradient-to-r from-blue-600 to-indigo-600 rounded-md shadow-lg mb-6"
         />
 
-        <p className="text-gray-600 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed">
+        <p className="text-gray-600 text-lg lg:text-xl max-w-2xl px-4 mx-auto leading-relaxed">
           {paragraph}
         </p>
       </motion.div>

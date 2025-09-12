@@ -1,8 +1,10 @@
 import React from "react";
+import  { useRouter } from "next/navigation";
 
-const SubCategoryCard = ({ title, image, description }) => {
+const SubCategoryCard = ({ title, image, description , category}) => {
+  const router = useRouter();
   return (
-    <div
+    <div onClick={()=>router.push(`${category.replaceAll(" ","-")}/${title.replaceAll(" ","-")}`)}
       className="relative h-48 w-80 rounded-md shadow-lg overflow-hidden group cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl"
       style={{
         backgroundImage: `url(${image})`,
@@ -22,7 +24,8 @@ const SubCategoryCard = ({ title, image, description }) => {
           {description}
         </p>
 
-        <button className="mt-4 px-5 py-2 rounded-md bg-white/90 text-blue-900 text-sm font-semibold opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-400 cursor-pointer shadow-md hover:bg-blue-700 hover:text-white">
+        <button onClick={()=>router.push(`${category.replaceAll(" ","-")}/${title.replaceAll(" ","-")}`)}
+         className="mt-4 px-5 py-2 rounded-md bg-blue-700 lg:bg-white/90 text-white lg:text-blue-900 text-sm font-semibold opacity-100 lg:opacity-0 group-hover:opacity-100 transform translate-y-0 lg:translate-y-4 group-hover:translate-y-0 transition-all duration-400 cursor-pointer shadow-md hover:bg-blue-700 hover:text-white">
           Explore Now
         </button>
       </div>

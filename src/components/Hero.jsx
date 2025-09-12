@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Pause, Play, ArrowRight } from 'lucide-react'
 
-export default function Hero() {
+export default function Hero({handleGetQuote ,handleExploreProducts }) {
   const videoRef = useRef(null)
   const [isPlaying, setIsPlaying] = useState(true)
 
@@ -67,10 +67,12 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-md shadow-md flex items-center gap-2 transition-all">
-            Explore Products <ArrowRight className="w-5 h-5" />
+          <button  onClick={handleExploreProducts}
+           className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white px-8 py-4 text-lg font-semibold rounded-md shadow-md flex items-center gap-2 transition-all">
+            Featured Products <ArrowRight className="w-5 h-5" />
           </button>
-          <button className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg font-semibold rounded-md shadow-md transition-all">
+          <button onClick={handleGetQuote}
+           className="border-2 border-white text-white cursor-pointer hover:bg-white hover:text-black px-8 py-4 text-lg font-semibold rounded-md shadow-md transition-all">
             Request a Quote
           </button>
         </motion.div>

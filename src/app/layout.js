@@ -3,6 +3,14 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import StickyWhatsAppButton from "@/components/StickyWhatsappButton";
 
+export const metadata = {
+  title: "Trimzo Enterprises",
+  description: "Awesome Next.js site",
+  icons: {
+    icon: "/favicon.svg", // can also be .png or .svg
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

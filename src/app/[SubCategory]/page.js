@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import { categorieData } from '@/Assets/AllData'
 
 import SubCategoryCard from '@/components/SubCategoryCard'
-import { Loader, Loader2 } from 'lucide-react'
+import {  Loader2 } from 'lucide-react'
 
 
 
@@ -22,7 +22,7 @@ useEffect(() => {
 const filteredCategory = categorieData.filter(cat => cat.category.toLowerCase() === categoryName.toLowerCase());
 setCategories(filteredCategory[0]?.subcategories || []);
 
-}, []);
+}, [categoryName]);
 
 console.log(categories);
   
@@ -66,7 +66,7 @@ console.log(categories);
 
       
       categories.map((cat) => (
-        <SubCategoryCard key={cat.id} title={cat.name} image={cat.Image}  description={cat.description} />
+        <SubCategoryCard key={cat.id} category={categoryName} title={cat.name} image={cat.Image}  description={cat.description} />
       ))}
     </section>
   

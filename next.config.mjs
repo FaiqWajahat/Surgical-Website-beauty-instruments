@@ -2,8 +2,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['www.brandingobeauty.com'], // 👈 whitelist your image domain here
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        pathname: "/**", // 👈 allows all paths from Cloudinary
+      },
+      {
+        protocol: "https",
+        hostname: "www.brandingobeauty.com",
+        pathname: "/**", // 👈 allows all images from your site
+      },
+    ],
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;
