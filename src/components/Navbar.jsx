@@ -299,6 +299,34 @@ const router=useRouter()
 </div>
 
 
+<<<<<<< HEAD
+=======
+            {/* Center search */}
+            <div className="hidden lg:flex items-center flex-1 lg:-translate-x-5 justify-center max-w-md mx-8">
+              <div className="relative w-full">
+                <Search className="size-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-900" />
+                <input
+                  type="text"
+                  placeholder="Search instruments..."
+                  className="w-full pl-10 pr-4 py-2 text-sm border border-gray-200 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-400 transition-colors"
+                />
+              </div>
+            </div>
+
+            {/* Right contact */}
+            <div className="flex items-center gap-2 text-white">
+              <div className="p-1.5 rounded-md bg-white/20 hover:bg-white text-white hover:text-blue-600">
+                <Phone className="size-3.5 " />
+              </div>
+              <a href="tel:+923146997979" className="text-md font-semibold">
+                +92 337 7282060
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+>>>>>>> c96d68c0738122d9fe2870e8b67c6287a32f9734
       {/* Main Nav */}
       <div className="max-w-7xl mx-auto px-6 bg-white">
         <div className="flex items-center justify-between h-16">
@@ -474,10 +502,14 @@ const router=useRouter()
         }`}
       >
         <div className="px-6 py-4 flex flex-col space-y-4">
+<<<<<<< HEAD
           {[
             { name: "Home", href: "/" },
             { name: "About", href: "/About" },
           ].map((item) => (
+=======
+          {[{ name: 'Home', href: '/' }, { name: 'About', href: '/About' }].map((item) => (
+>>>>>>> c96d68c0738122d9fe2870e8b67c6287a32f9734
             <Link
               key={item.name}
               href={item.href}
@@ -532,23 +564,32 @@ const router=useRouter()
                         {it.name}
                       </Link>
                     ))}
+                    
                   </div>
                 )}
               </div>
             );
           })}
+<<<<<<< HEAD
           
           {[
            
             { name: "Services", href: "/Services" },
           ].map((item) => (
+=======
+{[ { name: 'Services', href: '/Services' }].map((item) => (
+>>>>>>> c96d68c0738122d9fe2870e8b67c6287a32f9734
             <Link
               key={item.name}
               href={item.href}
               className={`font-medium ${
+<<<<<<< HEAD
                 pathname === item.href
                   ? "text-blue-700"
                   : "text-gray-700 hover:text-blue-700"
+=======
+                pathname === item.href ? 'text-blue-700' : 'text-gray-700 hover:text-blue-700'
+>>>>>>> c96d68c0738122d9fe2870e8b67c6287a32f9734
               }`}
               onClick={() => setMobileOpen(false)}
             >
