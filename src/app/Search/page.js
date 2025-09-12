@@ -40,9 +40,11 @@ export default function SearchPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
         >
-          The search results for "
-          <span className="font-semibold text-white">{search || "..."}</span>" 
-          are shown below.
+          The search results for&nbsp;
+          <span className="font-semibold text-white">
+            {search || "..."}
+          </span>
+          &nbsp;are shown below.
         </motion.p>
       </section>
 
@@ -53,7 +55,7 @@ export default function SearchPage() {
           second="Results"
           paragraph={
             search
-              ? `Showing results for "${search}"`
+              ? `Showing results for ${search}`
               : "Use the search bar in the navbar to find products."
           }
         />

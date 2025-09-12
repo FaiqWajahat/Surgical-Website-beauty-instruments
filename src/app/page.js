@@ -9,33 +9,33 @@ import Services from "@/components/services";
 import Stats from "@/components/Stats";
 import { useRef } from "react";
 
-const page = () => {
+const Page = () => {
 
-  const exploreProduts = useRef(null);
-  const  getQuote= useRef(null);
+  const ExploreProduts = useRef(null);
+  const  GetQuote= useRef(null);
 
-  const handleExploreProducts = () => {
-    if (exploreProduts.current) {
-      exploreProduts.current.scrollIntoView({ behavior: "smooth" });
+  const HandleExploreProducts = () => {
+    if (ExploreProduts.current) {
+      ExploreProduts.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-    const handleGetQuote = () => {
-    if (getQuote.current) {
-      getQuote.current.scrollIntoView({ behavior: "smooth" });
+    const HandleGetQuote = () => {
+    if (GetQuote.current) {
+      GetQuote.current.scrollIntoView({ behavior: "smooth" });
     }
   };
   return (
     <>
-      <Hero handleGetQuote={handleGetQuote} handleExploreProducts={handleExploreProducts} />
+      <Hero handleGetQuote={HandleGetQuote} handleExploreProducts={HandleExploreProducts} />
       <Category  />
-      <FeaturedProducts exploreProduts={exploreProduts}/>
+      <FeaturedProducts exploreProduts={ExploreProduts}/>
       <Stats />
       <Services />
-      <Contactus getQuote={getQuote} />
+      <Contactus getQuote={GetQuote} />
      
     </>
   );
 };
 
-export default page;
+export default Page;
