@@ -176,7 +176,7 @@ export const productData = [
     name: "Surgical Scalpel",
     category: "Surgical Instruments",
     subcategory: "Scalpels",
-    Articel: "SIS-2001",
+    article: "SIS-2001",
     image: "https://www.brandingobeauty.com/pictures/521216339_1757_pic_3.jpg",
     description:
       "High-precision surgical scalpel for delicate procedures requiring sharp blades.",
@@ -186,7 +186,7 @@ export const productData = [
     name: "Surgical Sclapels",
     category: "Surgical Instruments",
     subcategory: "Scalpels",
-    Articel: "SIS-2002",
+    article: "SIS-2002",
     image: "https://www.brandingobeauty.com/pictures/879472957_1760_pic_3.jpg",
     description:
       "Durable surgical scalpels designed for various medical applications.",
@@ -196,7 +196,7 @@ export const productData = [
     name: "Surgical Sclapels",
     category: "Surgical Instruments",
     subcategory: "Scalpels",
-    Articel: "SIS-2003",
+    article: "SIS-2003",
     image: "https://www.brandingobeauty.com/pictures/9465318_1765_pic_3.jpg",
     description:
       "Sterile surgical scalpels for precise incisions and tissue handling.",
@@ -206,7 +206,7 @@ export const productData = [
     name: "Surgical scissor",
     category: "Surgical Instruments",
     subcategory: "Scissors",
-    Articel: "SIS-2004",
+    article: "SIS-2004",
     image: "https://www.brandingobeauty.com/pictures/109467657_2161_pic_3.jpg",
     description:
       "Sharp surgical scissors for accurate tissue cutting and dissection.",
@@ -216,7 +216,7 @@ export const productData = [
     name: "Surgical Scissor",
     category: "Surgical Instruments",
     subcategory: "Scissors",
-    Articel: "SIS-2005",
+    article: "SIS-2005",
     image: "https://www.brandingobeauty.com/pictures/568353683_2163_pic_3.jpg",
     description:
       "High-quality surgical scissors for various medical procedures.",
@@ -226,7 +226,7 @@ export const productData = [
     name: "Surgical Scissor",
     category: "Surgical Instruments",
     subcategory: "Scissors",
-    Articel: "SIS-2006",
+    article: "SIS-2006",
     image: "https://www.brandingobeauty.com/pictures/469956880_2167_pic_3.jpg",
     description: "Precision surgical scissors for clean and efficient cuts.",
   },
@@ -236,7 +236,7 @@ export const productData = [
     name: "Splinter Forceps",
     category: "Surgical Instruments",
     subcategory: "Splinter Forceps",
-    Articel: "SIS-3001",
+    article: "SIS-3001",
     image: "https://www.brandingobeauty.com/pictures/51983852_1799_pic_3.jpg",
     description:
       "Fine-tipped splinter forceps for safe removal of splinters and foreign objects.",
@@ -246,7 +246,7 @@ export const productData = [
     name: "Splinter Forceps",
     category: "Surgical Instruments",
     subcategory: "Splinter Forceps",
-    Articel: "SIS-3002",
+    article: "SIS-3002",
     image: "https://www.brandingobeauty.com/pictures/392826239_1791_pic_3.jpg",
     description:
       "Durable splinter forceps with a secure grip for effective splinter extraction.",
@@ -256,7 +256,7 @@ export const productData = [
     name: "Splinter Forceps",
     category: "Surgical Instruments",
     subcategory: "Splinter Forceps",
-    Articel: "SIS-3003",
+    article: "SIS-3003",
     image: "	https://www.brandingobeauty.com/pictures/919785128_1793_pic_3.jpg",
     description:
       "Sterile splinter forceps designed for precision and safety during removal procedures.",
@@ -266,7 +266,7 @@ export const productData = [
     name: "Towel & Tubing Clamps",
     category: "Surgical Instruments",
     subcategory: "Towel & Tubing Clamps",
-    Articel: "SIS-4001",
+    article: "SIS-4001",
     image: "https://www.brandingobeauty.com/pictures/858752500_1829_pic_3.jpg",
     description:
       "Reliable towel and tubing clamps for secure control of surgical drapes and tubing.",
@@ -277,7 +277,7 @@ export const productData = [
     category: "Surgical Instruments",
 
     subcategory: "Towel & Tubing Clamps",
-    Articel: "SIS-4002",
+    article: "SIS-4002",
     image: "https://www.brandingobeauty.com/pictures/900130311_1833_pic_3.jpg",
     description:
       "High-quality towel and tubing clamps for effective surgical applications.",
@@ -287,7 +287,7 @@ export const productData = [
     name: "Towel & Tubing Clamps",
     category: "Surgical Instruments",
     subcategory: "Towel & Tubing Clamps",
-    Articel: "SIS-4003",
+    article: "SIS-4003",
     image: "	https://www.brandingobeauty.com/pictures/246852287_2374_pic_3.jpg",
     description:
       "Precision towel and tubing clamps for secure handling during medical procedures.",
@@ -298,7 +298,7 @@ export const productData = [
     name: "Suture",
     category: "Surgical Instruments",
     subcategory: "Sutures",
-    Articel: "SIS-5001",
+    article: "SIS-5001",
     image: "https://www.brandingobeauty.com/pictures/369971089_2051_pic_3.jpg",
 
     description:
@@ -309,7 +309,7 @@ export const productData = [
     name: "Suture",
     category: "Surgical Instruments",
     subcategory: "Sutures",
-    Articel: "SIS-5002",
+    article: "SIS-5002",
     image: "https://www.brandingobeauty.com/pictures/679093260_1746_pic_3.jpg",
     description:
       "Sterile surgical sutures designed for optimal tissue support and recovery.",
@@ -319,7 +319,7 @@ export const productData = [
     name: "Suture",
     category: "Surgical Instruments",
     subcategory: "Sutures",
-    Articel: "SIS-5003",
+    article: "SIS-5003",
 
     image: "https://www.brandingobeauty.com/pictures/679093260_1746_pic_3.jpg",
     description:
@@ -330,7 +330,7 @@ export const productData = [
     name: "Rhinology Set",
     category: "Surgical Instruments",
     subcategory: "Rhinologys",
-    Articel: "SIS-6001",
+    article: "SIS-6001",
     image: "	https://www.brandingobeauty.com/pictures/638787775_2734_pic_3.jpg",
     description:
       "Comprehensive rhinology set for nasal surgeries and procedures.",
@@ -340,7 +340,7 @@ export const productData = [
     name: "Rhinology Set",
     category: "Surgical Instruments",
     subcategory: "Rhinologys",
-    Articel: "SIS-6002",
+    article: "SIS-6002",
     image: "https://www.brandingobeauty.com/pictures/25047034_2754_pic_3.jpg",
     description:
       "Specialized rhinology instruments for effective nasal treatment and care.",
@@ -350,7 +350,7 @@ export const productData = [
     name: "Rhinology Set",
     category: "Surgical Instruments",
     subcategory: "Rhinologys",
-    Articel: "SIS-6003",
+    article: "SIS-6003",
     image: "https://www.brandingobeauty.com/pictures/224873483_2010_pic_3.jpg",
     description:
       "High-quality rhinology set for precise and safe nasal surgeries.",
@@ -360,7 +360,7 @@ export const productData = [
     name: "Titanium Coated Hair Scissors",
     category: "Scissors",
     subcategory: "Titanium Coated Hair Scissors",
-    Articel: "SIS-7001",
+    article: "SIS-7001",
     image: "https://www.brandingobeauty.com/pictures/622479485_1239_pic_3.jpg",
     description:
       "Durable titanium-coated hair scissors for sharp and precise hair cutting.",
@@ -370,7 +370,7 @@ export const productData = [
     name: "Titanium Coated Hair Scissors",
     category: "Scissors",
     subcategory: "Titanium Coated Hair Scissors",
-    Articel: "SIS-7002",
+    article: "SIS-7002",
     image: "	https://www.brandingobeauty.com/pictures/104389575_1241_pic_3.jpg",
     description:
       "Lightweight titanium-coated hair scissors for comfortable and efficient styling.",
@@ -380,7 +380,7 @@ export const productData = [
     name: "Titanium Coated Hair Scissors",
     category: "Scissors",
     subcategory: "Titanium Coated Hair Scissors",
-    Articel: "SIS-7003",
+    article: "SIS-7003",
     image: "https://www.brandingobeauty.com/pictures/719666982_1252_pic_3.jpg",
     description:
       "Professional-grade titanium-coated hair scissors for salon-quality results.",
@@ -390,7 +390,7 @@ export const productData = [
     name: "Thinning Scissors",
     category: "Scissors",
     subcategory: "Thinning Scissors",
-    Articel: "SIS-8001",
+    article: "SIS-8001",
     image: "	https://www.brandingobeauty.com/pictures/761637900_1228_pic_3.jpg",
     description:
       "Effective thinning scissors for texturizing and blending hair.",
@@ -400,7 +400,7 @@ export const productData = [
     name: "Thinning Scissors",
     category: "Scissors",
     subcategory: "Thinning Scissors",
-    Articel: "SIS-8002",
+    article: "SIS-8002",
     image: "https://www.brandingobeauty.com/pictures/728574607_1229_pic_3.jpg",
     description:
       "High-quality thinning scissors for professional hairdressing.",
@@ -410,7 +410,7 @@ export const productData = [
     name: "Thinning Scissors",
     category: "Scissors",
     subcategory: "Thinning Scissors",
-    Articel: "SIS-8003",
+    article: "SIS-8003",
     image:
       "https://www.brandingobeauty.com/pictures/Golden-Thinning-Scissor_1276_p_3.jpg",
     description:
@@ -421,7 +421,7 @@ export const productData = [
     name: "Hair Cutting Scissors",
     category: "Scissors",
     subcategory: "Hair Cutting Scissors",
-    Articel: "SIS-9001",
+    article: "SIS-9001",
     image: "	https://www.brandingobeauty.com/pictures/950021302_1215_pic_3.jpg",
     description: "Sharp hair cutting scissors for clean and accurate haircuts.",
   },
@@ -430,7 +430,7 @@ export const productData = [
     name: "Hair Cutting Scissors",
     category: "Scissors",
     subcategory: "Hair Cutting Scissors",
-    Articel: "SIS-9002",
+    article: "SIS-9002",
     image: "https://www.brandingobeauty.com/pictures/75621209_1214_pic_3.jpg",
     description:
       "Ergonomic hair cutting scissors for comfortable and precise cutting.",
@@ -440,7 +440,7 @@ export const productData = [
     name: "Hair Cutting Scissors",
     category: "Scissors",
     subcategory: "Hair Cutting Scissors",
-    Articel: "SIS-9003",
+    article: "SIS-9003",
     image: "https://www.brandingobeauty.com/pictures/277171897_1218_pic_3.jpg",
 
     description:
@@ -453,7 +453,7 @@ export const productData = [
 
     category: "Scissors",
     subcategory: "Economy Hair Thinning Scissors",
-    Articel: "SIS-10001",
+    article: "SIS-10001",
     image: "https://www.brandingobeauty.com/pictures/811523382_1301_pic_3.jpg",
 
     description:
@@ -464,7 +464,7 @@ export const productData = [
     name: "Economy Hair Thinning Scissors",
     category: "Scissors",
     subcategory: "Economy Hair Thinning Scissors",
-    Articel: "SIS-10002",
+    article: "SIS-10002",
     image: "https://www.brandingobeauty.com/pictures/839580248_1297_pic_3.jpg",
     description:
       "Budget-friendly economy hair thinning scissors for versatile hair styling.",
@@ -475,7 +475,7 @@ export const productData = [
     name: "Economy Hair Thinning Scissors",
     category: "Scissors",
     subcategory: "Economy Hair Thinning Scissors",
-    Articel: "SIS-10003",
+    article: "SIS-10003",
     image: "https://www.brandingobeauty.com/pictures/16513463_1292_pic_3.jpg",
     description:
       "Cost-effective economy hair thinning scissors for professional hairdressing.",
@@ -486,7 +486,7 @@ export const productData = [
     name: "Cuticle & Personal Care Scissors",
     category: "Scissors",
     subcategory: "Cuticle & Personal Care Scissors",
-    Articel: "SIS-11001",
+    article: "SIS-11001",
     image: "https://www.brandingobeauty.com/pictures/455310397_1340_pic_3.jpg",
     description:
       "Precision cuticle and personal care scissors for grooming and nail care.",
@@ -496,7 +496,7 @@ export const productData = [
     name: "Cuticle & Personal Care Scissors",
     category: "Scissors",
     subcategory: "Cuticle & Personal Care Scissors",
-    Articel: "SIS-11002",
+    article: "SIS-11002",
     image: "	https://www.brandingobeauty.com/pictures/836765991_1345_pic_3.jpg",
     description:
       "High-quality cuticle and personal care scissors for delicate trimming tasks.",
@@ -506,7 +506,7 @@ export const productData = [
     name: "Cuticle & Personal Care Scissors",
     category: "Scissors",
     subcategory: "Cuticle & Personal Care Scissors",
-    Articel: "SIS-11003",
+    article: "SIS-11003",
 
     image: "https://www.brandingobeauty.com/pictures/793412702_1349_pic_3.jpg",
     description:
@@ -518,7 +518,7 @@ export const productData = [
     category: "Scissors",
 
     subcategory: "Barracuda Hair Scissors",
-    Articel: "SIS-12001",
+    article: "SIS-12001",
     image: "https://www.brandingobeauty.com/pictures/3225844_1278_pic_3.jpg",
     description:
       "Professional Barracuda hair scissors for sharp and precise hair cutting.",
@@ -528,7 +528,7 @@ export const productData = [
     name: "Barracuda Hair Scissors",
     category: "Scissors",
     subcategory: "Barracuda Hair Scissors",
-    Articel: "SIS-12002",
+    article: "SIS-12002",
     image: "https://www.brandingobeauty.com/pictures/393616145_1282_pic_3.jpg",
     description:
       "Ergonomic Barracuda hair scissors for comfortable and efficient styling.",
@@ -538,7 +538,7 @@ export const productData = [
     name: "Barracuda Hair Scissors",
     category: "Scissors",
     subcategory: "Barracuda Hair Scissors",
-    Articel: "SIS-12003",
+    article: "SIS-12003",
     image: "https://www.brandingobeauty.com/pictures/447576630_1279_pic_3.jpg",
     description:
       "High-quality Barracuda hair scissors for salon-quality results.",
@@ -548,7 +548,7 @@ export const productData = [
     name: "Adson Tweezers",
     category: "Tweezers",
     subcategory: "Adson Tweezers",
-    Articel: "TW-2001",
+    article: "TW-2001",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757705237/adson-tweezers-01_bkkuz4.jpg",
     description:
@@ -559,7 +559,7 @@ export const productData = [
     name: "Adson Tweezers",
     category: "Tweezers",
     subcategory: "Adson Tweezers",
-    Articel: "TW-2002",
+    article: "TW-2002",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757705541/adson-tweezer-02_i4zkvp.jpg",
     description:
@@ -570,7 +570,7 @@ export const productData = [
     name: "Adson Tweezers",
     category: "Tweezers",
     subcategory: "Adson Tweezers",
-    Articel: "TW-2003",
+    article: "TW-2003",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757705665/adson-tweezer-03_a7s1kh.jpg",
     description:
@@ -581,7 +581,7 @@ export const productData = [
     name: "Dressing Tweezers",
     category: "Tweezers",
     subcategory: "Dressing Tweezers",
-    Articel: "TW-3001",
+    article: "TW-3001",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757705752/dressing-tweezer-01_rn9rml.jpg",
     description:
@@ -592,7 +592,7 @@ export const productData = [
     name: "Dressing Tweezers",
     category: "Tweezers",
     subcategory: "Dressing Tweezers",
-    Articel: "TW-3002",
+    article: "TW-3002",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757705796/dressing-tweezer-02_lgirgu.jpg",
     description:
@@ -604,7 +604,7 @@ export const productData = [
     category: "Tweezers",
     subcategory: "Dressing Tweezers",
 
-    Articel: "TW-3003",
+    article: "TW-3003",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757705843/dressing-tweezer-03_wyje2e.jpg",
     description:
@@ -615,7 +615,7 @@ export const productData = [
     name: "Splinter Tweezers",
     category: "Tweezers",
     subcategory: "Splinter Tweezers",
-    Articel: "TW-4001",
+    article: "TW-4001",
 
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757705964/splinter-tweezer-01_z25kmm.jpg",
@@ -627,7 +627,7 @@ export const productData = [
     name: "Splinter Tweezers",
     category: "Tweezers",
     subcategory: "Splinter Tweezers",
-    Articel: "TW-4002",
+    article: "TW-4002",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757705970/splinter-tweezer-02_lrz093.jpg",
     description:
@@ -638,7 +638,7 @@ export const productData = [
     name: "Splinter Tweezers",
     category: "Tweezers",
     subcategory: "Splinter Tweezers",
-    Articel: "TW-4003",
+    article: "TW-4003",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757705962/splinter-tweezer-03_ylx6uw.jpg",
     description:
@@ -649,7 +649,7 @@ export const productData = [
     name: "Fine Tip Tweezers",
     category: "Tweezers",
     subcategory: "Fine Tip Tweezers",
-    Articel: "TW-5001",
+    article: "TW-5001",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706082/fine_tip-tweezer-01_a4gfad.jpg",
     description:
@@ -660,7 +660,7 @@ export const productData = [
     name: "Fine Tip Tweezers",
     category: "Tweezers",
     subcategory: "Fine Tip Tweezers",
-    Articel: "TW-5002",
+    article: "TW-5002",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706082/fine_tip-tweezer-02_uik1ek.jpg",
     description:
@@ -671,7 +671,7 @@ export const productData = [
     name: "Fine Tip Tweezers",
     category: "Tweezers",
     subcategory: "Fine Tip Tweezers",
-    Articel: "TW-5003",
+    article: "TW-5003",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706079/fine_tip-tweezer-03_ghl6sz.jpg",
     description:
@@ -682,7 +682,7 @@ export const productData = [
     name: "Flat Tip Tweezers",
     category: "Tweezers",
     subcategory: "Flat Tip Tweezers",
-    Articel: "TW-6001",
+    article: "TW-6001",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706166/flate_tip-tweezer-01_vlvvmw.jpg",
     description:
@@ -695,7 +695,7 @@ export const productData = [
 
     subcategory: "Flat Tip Tweezers",
 
-    Articel: "TW-6002",
+    article: "TW-6002",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706164/flate_tip-tweezer-02_be8zyr.jpg",
     description:
@@ -706,7 +706,7 @@ export const productData = [
     name: "Flat Tip Tweezers",
     category: "Tweezers",
     subcategory: "Flat Tip Tweezers",
-    Articel: "TW-6003",
+    article: "TW-6003",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706163/flate_tip-tweezer-03_xjax52.jpg",
     description:
@@ -717,7 +717,7 @@ export const productData = [
     name: "Curved Tweezers",
     category: "Tweezers",
     subcategory: "Curved Tweezers",
-    Articel: "TW-7001",
+    article: "TW-7001",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706247/curved-tweezer-01_fm2fml.jpg",
     description:
@@ -728,7 +728,7 @@ export const productData = [
     name: "Curved Tweezers",
     category: "Tweezers",
     subcategory: "Curved Tweezers",
-    Articel: "TW-7002",
+    article: "TW-7002",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706247/curved-tweezer-02_wpj9kj.jpg",
     description:
@@ -739,7 +739,7 @@ export const productData = [
     name: "Curved Tweezers",
     category: "Tweezers",
     subcategory: "Curved Tweezers",
-    Articel: "TW-7003",
+    article: "TW-7003",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706246/curved-tweezer-03_yazgjw.jpg",
     description:
@@ -751,7 +751,7 @@ export const productData = [
     name: "Barber Razor",
     category: "Razors",
     subcategory: "Barber Razors",
-    Articel: "RZ-1001",
+    article: "RZ-1001",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706325/barber-razor-01_qodoto.jpg",
     description:
@@ -762,7 +762,7 @@ export const productData = [
     name: "Barber Razor",
     category: "Razors",
     subcategory: "Barber Razors",
-    Articel: "RZ-1002",
+    article: "RZ-1002",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706323/barber-razor-02_xmzgx3.jpg",
     description:
@@ -773,7 +773,7 @@ export const productData = [
     name: "Barber Razor",
     category: "Razors",
     subcategory: "Barber Razors",
-    Articel: "RZ-1003",
+    article: "RZ-1003",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706322/barber-razor-03_qr9cdy.jpg",
     description:
@@ -784,7 +784,7 @@ export const productData = [
     name: "Thinning Razor",
     category: "Razors",
     subcategory: "Thinning Razors",
-    Articel: "RZ-2001",
+    article: "RZ-2001",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706668/thinning-razor-01_fuuege.jpg",
     description: "Effective thinning razor for hair texturizing and blending.",
@@ -794,7 +794,7 @@ export const productData = [
     name: "Thinning Razor",
     category: "Razors",
     subcategory: "Thinning Razors",
-    Articel: "RZ-2002",
+    article: "RZ-2002",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706667/thinning-razor-02_ogz6fp.jpg",
     description:
@@ -805,7 +805,7 @@ export const productData = [
     name: "Thinning Razor",
     category: "Razors",
     subcategory: "Thinning Razors",
-    Articel: "RZ-2003",
+    article: "RZ-2003",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706667/thinning-razor-03_zgoudj.jpg",
     description:
@@ -817,7 +817,7 @@ export const productData = [
     category: "Razors",
 
     subcategory: "Bone and Horn Razors",
-    Articel: "RZ-3001",
+    article: "RZ-3001",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706732/bone-razor-01_lmigxr.jpg",
     description:
@@ -828,7 +828,7 @@ export const productData = [
     name: "Bone and Horn Razor",
     category: "Razors",
     subcategory: "Bone and Horn Razors",
-    Articel: "RZ-3002",
+    article: "RZ-3002",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706734/bone-razor-02_zzmdls.jpg",
     description:
@@ -839,7 +839,7 @@ export const productData = [
     name: "Bone and Horn Razor",
     category: "Razors",
     subcategory: "Bone and Horn Razors",
-    Articel: "RZ-3003",
+    article: "RZ-3003",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706731/bone-razor-03_baeqkc.jpg",
     description:
@@ -850,7 +850,7 @@ export const productData = [
     name: "Damascus Razor",
     category: "Razors",
     subcategory: "Damascus Razors",
-    Articel: "RZ-4001",
+    article: "RZ-4001",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706824/damascus-razor-01_dthwj3.jpg",
     description:
@@ -861,7 +861,7 @@ export const productData = [
     name: "Damascus Razor",
     category: "Razors",
     subcategory: "Damascus Razors",
-    Articel: "RZ-4002",
+    article: "RZ-4002",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706824/damascus-razor-02_fkaqsg.jpg",
     description:
@@ -872,7 +872,7 @@ export const productData = [
     name: "Damascus Razor",
     category: "Razors",
     subcategory: "Damascus Razors",
-    Articel: "RZ-4003",
+    article: "RZ-4003",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706823/damascus-razor-03_oaxw7a.jpg",
     description:
@@ -883,7 +883,7 @@ export const productData = [
     name: "Plastic Handle Razor",
     category: "Razors",
     subcategory: "Plastic Handle Razors",
-    Articel: "RZ-5001",
+    article: "RZ-5001",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706824/damascus-razor-01_dthwj3.jpg",
 
@@ -895,7 +895,7 @@ export const productData = [
     name: "Plastic Handle Razor",
     category: "Razors",
     subcategory: "Plastic Handle Razors",
-    Articel: "RZ-5002",
+    article: "RZ-5002",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706824/damascus-razor-02_fkaqsg.jpg",
     description: "Affordable plastic handle razor for everyday shaving needs.",
@@ -905,7 +905,7 @@ export const productData = [
     name: "Plastic Handle Razor",
     category: "Razors",
     subcategory: "Plastic Handle Razors",
-    Articel: "RZ-5003",
+    article: "RZ-5003",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706823/damascus-razor-03_oaxw7a.jpg",
     description:
@@ -917,7 +917,7 @@ export const productData = [
     name: "Wood Handle Razor",
     category: "Razors",
     subcategory: "Wood Handle Razors",
-    Articel: "RZ-6001",
+    article: "RZ-6001",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706972/wood-razor-01_lx5ixj.jpg",
     description:
@@ -928,7 +928,7 @@ export const productData = [
     name: "Wood Handle Razor",
     category: "Razors",
     subcategory: "Wood Handle Razors",
-    Articel: "RZ-6002",
+    article: "RZ-6002",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706970/wood-rzor-02_tbfugq.jpg",
     description:
@@ -939,7 +939,7 @@ export const productData = [
     name: "Wood Handle Razor",
     category: "Razors",
     subcategory: "Wood Handle Razors",
-    Articel: "RZ-6003",
+    article: "RZ-6003",
     image:
       "https://res.cloudinary.com/dtiebz6dt/image/upload/v1757706969/wood-razor-03_cre1xe.jpg",
     description: "High-quality wood handle razor for a smooth and close shave.",

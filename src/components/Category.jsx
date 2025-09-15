@@ -1,6 +1,5 @@
 'use client'
 import React from 'react';
-import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import SectionHeading from './SectionHeading';
@@ -11,60 +10,52 @@ import category04 from "../Assets/Images/category-04.jpg"
 
 const Category = () => {
   const router = useRouter();
-  const categories = 
-    [
-  {
-    id: 1,
-    title: "Surgical Instruments",
-    description: "Comprehensive range of scalpels, forceps, scissors, retractors, and other precision surgical tools.",
-    buttonText: "View Products",
-    image: category01,
-    badge: "Surgical",
-    href: "/Surgical-Instruments"
-  },
-  {
-    id: 2,
-    title: "Scissors",
-    description: "High-quality surgical and beauty scissors designed for accuracy, durability, and effortless cutting.",
-    buttonText: "View Products",
-    image: category02,
-    badge: "Scissors",
-    href: "/Scissors"
-  },
-  {
-    id: 3,
-    title: "Tweezers",
-    description: "Premium tweezers for surgical, dental, and beauty applications, crafted with precision and comfort in mind.",
-    buttonText: "View Products",
-    image: category03,
-    badge: "Tweezers",
-    href: "/Tweezers"
-  },
-  {
-    id: 4,
-    title: "Razors",
-    description: "Professional razors and blades engineered for clean, sharp, and reliable performance.",
-    buttonText: "View Products",
-    image: category04,
-    badge: "Razors",
-    href: "/Razors"
-  }
-];
-
+  const categories = [
+    {
+      id: 1,
+      title: "Surgical Instruments",
+      description: "Comprehensive range of scalpels, forceps, scissors, retractors, and other precision surgical tools.",
+      buttonText: "View Products",
+      image: category01,
+      badge: "Surgical",
+      href: "/Surgical-Instruments"
+    },
+    {
+      id: 2,
+      title: "Scissors",
+      description: "High-quality surgical and beauty scissors designed for accuracy, durability, and effortless cutting.",
+      buttonText: "View Products",
+      image: category02,
+      badge: "Scissors",
+      href: "/Scissors"
+    },
+    {
+      id: 3,
+      title: "Tweezers",
+      description: "Premium tweezers for surgical, dental, and beauty applications, crafted with precision and comfort in mind.",
+      buttonText: "View Products",
+      image: category03,
+      badge: "Tweezers",
+      href: "/Tweezers"
+    },
+    {
+      id: 4,
+      title: "Razors",
+      description: "Professional razors and blades engineered for clean, sharp, and reliable performance.",
+      buttonText: "View Products",
+      image: category04,
+      badge: "Razors",
+      href: "/Razors"
+    }
+  ];
 
   const handleCardClick = (category) => {
     router.push(category.href);
   };
 
-
-
   // Card Component
   const CategoryCard = ({ category }) => (
-    <motion.div
-  
-      variants={cardVariants}
-      className="flex justify-center"
-    >
+    <div className="flex justify-center">
       <div className="card card-side bg-white shadow-lg hover:shadow-2xl transition-all duration-300 
                       w-full h-56 rounded-md overflow-hidden group border border-gray-100 relative">
         
@@ -118,24 +109,8 @@ const Category = () => {
         {/* Side Accent */}
         <div className="absolute left-0 top-0 bottom-0 w-1 group-hover:w-2 duration-300 animation-all bg-gradient-to-b from-blue-600 to-blue-700 opacity-80"></div>
       </div>
-    </motion.div>
+    </div>
   );
-
-  // Motion Variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    show: { 
-      opacity: 1,
-      transition: { staggerChildren: 0.2 }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 40 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } }
-  };
-
-
 
   return (
     <div className="md:px-16  mx-auto px-4 py-12 relative">
@@ -143,21 +118,13 @@ const Category = () => {
       <SectionHeading first={"Produt"} second={"Categories"} paragraph={
         "Discover our diverse product categories, each designed to meet the highest standards of quality and precision for medical and beauty professionals."
       }/>
+      
       {/* Categories Grid */}
-      <motion.div 
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12"
-      >
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
         {categories.map((category) => (
           <CategoryCard key={category.id} category={category} />
         ))}
-      </motion.div>
-
-      
-      
+      </div>
     </div>
   );
 };

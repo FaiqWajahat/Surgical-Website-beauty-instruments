@@ -5,17 +5,22 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
+    "seed": "node src/scripts/seed.js",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "axios": "^1.12.2",
+    "cloudinary": "^2.7.0",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.542.0",
+    "mongoose": "^8.18.1",
     "next": "15.5.2",
     "react": "19.1.0",
     "react-countup": "^6.5.3",
     "react-dom": "19.1.0",
+    "react-hot-toast": "^2.6.0",
     "swiper": "^11.2.10",
     "zustand": "^5.0.8"
   },

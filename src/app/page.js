@@ -7,12 +7,27 @@ import FeaturedProducts from "@/components/FeaturedProducts";
 import Hero from "@/components/Hero";
 import Services from "@/components/services";
 import Stats from "@/components/Stats";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import { useStore } from "@/Store/states";
+
+
 
 const Page = () => {
 
+  const { getProduct, productData}=useStore()
   const ExploreProduts = useRef(null);
   const  GetQuote= useRef(null);
+ const getData=async()=>{
+await getProduct()
+ }
+
+  useEffect(()=>{
+  if(productData.length===0)
+  {
+     getData()
+  }
+},[])
+console.log(productData)
 
   const HandleExploreProducts = () => {
     if (ExploreProduts.current) {

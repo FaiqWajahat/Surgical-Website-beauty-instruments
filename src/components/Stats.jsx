@@ -12,7 +12,7 @@ const stats = [
 
 const Stats = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true }); // trigger only once
+  const isInView = useInView(ref, { once: true }); 
 
   return (
     <section className="w-full bg-blue-950 my-16  py-20  flex items-center justify-center ">

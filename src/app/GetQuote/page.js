@@ -6,12 +6,12 @@ import SectionHeading from '@/components/SectionHeading'
 import { Send } from 'lucide-react'
 import Image from 'next/image'
 import { useStore } from '@/Store/states'
-import { productData } from '@/Assets/AllData'
+
 import emailjs from '@emailjs/browser'
 import { useRouter } from 'next/navigation'
 
 export default function GetQuotePage() {
-  const { article } = useStore()
+  const { article, productData } = useStore()
   const [image, setImage] = useState(null)
   const router = useRouter()
   const formRef = useRef(null)
@@ -23,7 +23,7 @@ const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'orBqo6XBefuVDV
   useEffect(() => {
     if (article) {
       const filterData = productData.filter(
-        (v) => v.Articel.toLowerCase() === article.toLowerCase()
+        (v) => v.article.toLowerCase() === article.toLowerCase()
       )
       setImage(filterData[0]?.image)
     }

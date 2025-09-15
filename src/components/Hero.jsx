@@ -38,27 +38,27 @@ export default function Hero({handleGetQuote ,handleExploreProducts }) {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl">
         <motion.h1
-          className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Premium Instruments for{" "}
-          <span className="block text-blue-500">Surgery & Care</span>
-        </motion.h1>
+  className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6"
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  Premium Instruments for{" "}
+  <span className="block text-blue-500">Beauty & Care</span>
+</motion.h1>
 
-        <motion.p
-          className="text-lg md:text-xl text-gray-200 leading-relaxed mb-10"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          From{" "}
-          <span className="font-semibold text-blue-400">surgical instruments</span> trusted in operating rooms to{" "}
-          <span className="font-semibold text-blue-400">scissors, tweezers, and razors</span> for professionals,  
-          we craft precision tools exported to{" "}
-          <span className="font-semibold text-blue-400">150+ countries worldwide</span>.
-        </motion.p>
+<motion.p
+  className="text-lg md:text-xl text-gray-200 leading-relaxed mb-10"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.3 }}
+>
+  From{" "}
+  <span className="font-semibold text-blue-400">beauty instruments</span> trusted by professionals to{" "}
+  <span className="font-semibold text-blue-400">scissors, tweezers, and razors</span> for everyday precision,  
+  we craft high-quality tools exported to{" "}
+  <span className="font-semibold text-blue-400">150+ countries worldwide</span>.
+</motion.p>
 
         {/* Buttons */}
         <motion.div
