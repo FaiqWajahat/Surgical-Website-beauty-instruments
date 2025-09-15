@@ -116,7 +116,7 @@ export default function ProductTable({
                   <td className="px-6 py-4">
                     <button
                       onClick={() => onDelete(product._id)}
-                      className="p-2 rounded-md bg-red-50 text-red-600 hover:bg-red-100 transition active:scale-95"
+                      className="p-2 cursor-pointer rounded-md bg-red-50 text-red-600 hover:bg-red-100 transition active:scale-95"
                     >
                       <Trash2 className="w-4 h-4" />
                     </button>

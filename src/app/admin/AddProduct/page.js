@@ -2,14 +2,15 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { PlusCircle, Upload, ChevronDown, Check } from 'lucide-react'
+import { PlusCircle, Upload, ChevronDown, Check, Loader2 } from 'lucide-react'
 import Image from 'next/image'
 import { useStore } from '@/Store/states'
 import { useRouter } from 'next/navigation'
 
 export default function AddProductPage() {
- const router=useRouter()
-  const {addProduct}=useStore()
+  const router = useRouter()
+  const { addProduct } = useStore()
+
   const [form, setForm] = useState({
     name: '',
     category: '',
@@ -20,45 +21,17 @@ export default function AddProductPage() {
   })
   const [preview, setPreview] = useState(null)
   const [errors, setErrors] = useState({})
+  const [loading, setLoading] = useState(false) // ✅ loading state
   const [dropdowns, setDropdowns] = useState({
     category: false,
     subcategory: false,
   })
 
-  // ✅ Updated categories with subcategories from your data
   const categories = {
-    "Surgical Instruments": [
-      "Scalpels",
-      "Splinter Forceps",
-      "Scissors",
-      "Towel & Tubing Clamps",
-      "Sutures",
-      "Rhinologys"
-    ],
-    "Scissors": [
-      "Titanium Coated Hair Scissors",
-      "Thinning Scissors",
-      "Hair Cutting Scissors",
-      "Economy Hair Thinning Scissors",
-      "Cuticle & Personal Care Scissors",
-      "Barracuda Hair Scissors"
-    ],
-    "Tweezers": [
-      "Adson Tweezers",
-      "Dressing Tweezers",
-      "Splinter Tweezers",
-      "Fine Tip Tweezers",
-      "Flat Tip Tweezers",
-      "Curved Tweezers"
-    ],
-    "Razors": [
-      "Barber Razors",
-      "Thinning Razors",
-      "Bone and Horn Razors",
-      "Damascus Razors",
-      "Plastic Handle Razors",
-      "Wood Handle Razors"
-    ],
+    "Surgical Instruments": ["Scalpels", "Splinter Forceps", "Scissors", "Towel & Tubing Clamps", "Sutures", "Rhinologys"],
+    "Scissors": ["Titanium Coated Hair Scissors", "Thinning Scissors", "Hair Cutting Scissors", "Economy Hair Thinning Scissors", "Cuticle & Personal Care Scissors", "Barracuda Hair Scissors"],
+    "Tweezers": ["Adson Tweezers", "Dressing Tweezers", "Splinter Tweezers", "Fine Tip Tweezers", "Flat Tip Tweezers", "Curved Tweezers"],
+    "Razors": ["Barber Razors", "Thinning Razors", "Bone and Horn Razors", "Damascus Razors", "Plastic Handle Razors", "Wood Handle Razors"],
   }
 
   const validate = () => {
@@ -78,45 +51,26 @@ export default function AddProductPage() {
     setForm((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSelectChange = (name, value) => {
-    setForm((prev) => ({
-      ...prev,
-      [name]: value,
-      ...(name === 'category' ? { subcategory: '' } : {}), // reset subcategory if category changes
-    }))
-    setDropdowns({ ...dropdowns, [name]: false })
-    if (errors[name]) {
-      setErrors((prev) => ({ ...prev, [name]: '' }))
-    }
-  }
-
-  const toggleDropdown = (name) => {
-    setDropdowns({
-      ...dropdowns,
-      [name]: !dropdowns[name],
-      ...(name === 'category' ? { subcategory: false } : { category: false }),
-    })
-  }
-
-const handleFileChange = (e) => {
-    const file = e.target.files[0];
+  const handleFileChange = (e) => {
+    const file = e.target.files[0]
     if (file && file.type.startsWith("image/")) {
-      const reader = new FileReader();
+      const reader = new FileReader()
       reader.onloadend = () => {
-        setForm((prev) => ({ ...prev, image: reader.result })); 
-        setPreview(reader.result);
-      };
-      reader.readAsDataURL(file);
+        setForm((prev) => ({ ...prev, image: reader.result }))
+        setPreview(reader.result)
+      }
+      reader.readAsDataURL(file)
     }
-  };
+  }
 
-  const handleSubmit =async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    if (validate()) {
-       
-      await addProduct(form)
-      console.log(form)
+    if (!validate()) return
 
+    try {
+      setLoading(true) // ✅ start loading
+      await addProduct(form) // API call
+      console.log("✅ Product Added:", form)
 
       // reset form
       setForm({
@@ -128,12 +82,36 @@ const handleFileChange = (e) => {
         image: "",
       })
       setPreview(null)
+    } catch (error) {
+      console.error("❌ Failed to add product:", error)
+    } finally {
+      setLoading(false) // ✅ stop loading
     }
   }
 
   // Custom Select Component
   const CustomSelect = ({ name, value, options, placeholder, disabled = false }) => {
     const isOpen = dropdowns[name]
+
+    const toggleDropdown = () => {
+      setDropdowns({
+        ...dropdowns,
+        [name]: !dropdowns[name],
+        ...(name === 'category' ? { subcategory: false } : { category: false }),
+      })
+    }
+
+    const handleSelectChange = (name, value) => {
+      setForm((prev) => ({
+        ...prev,
+        [name]: value,
+        ...(name === 'category' ? { subcategory: '' } : {}),
+      }))
+      setDropdowns({ ...dropdowns, [name]: false })
+      if (errors[name]) {
+        setErrors((prev) => ({ ...prev, [name]: '' }))
+      }
+    }
 
     return (
       <div className="relative">
@@ -201,15 +179,19 @@ const handleFileChange = (e) => {
       >
         {/* Header */}
         <div className="flex items-center justify-between gap-3 mb-8 px-2 border-b pb-4">
-         <div className='flex gap-3 items-center'>
-           <PlusCircle className="w-7 h-7 text-blue-600" />
-          <h2 className="md:text-2xl text-xl font-bold text-blue-700">Add <span className='hidden md:inline-block'>New</span> Product</h2>
-         </div>
+          <div className='flex gap-3 items-center'>
+            <PlusCircle className="w-7 h-7 text-blue-600" />
+            <h2 className="md:text-2xl text-xl font-bold text-blue-700">
+              Add <span className='hidden md:inline-block'>New</span> Product
+            </h2>
+          </div>
 
-         <buttto onClick={()=>router.push("/admin")} 
-         className="px-4 py-2 bg-blue-700 text-white cursor-pointer rounded-md hover:bg-blue-800 transition-all duration-200 active:scale-95">
-          Dashboard
-         </buttto>
+          <button 
+            onClick={() => router.push("/admin")} 
+            className="px-4 py-2 bg-blue-700 text-white cursor-pointer rounded-md hover:bg-blue-800 transition-all duration-200 active:scale-95"
+          >
+            Dashboard
+          </button>
         </div>
 
         <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-10">
@@ -317,9 +299,18 @@ const handleFileChange = (e) => {
           <div className="md:col-span-2">
             <button
               type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3.5 rounded-md font-semibold shadow-lg transition"
+              disabled={loading}
+              className={`w-full flex cursor-pointer items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-3.5 rounded-md font-semibold shadow-lg transition 
+                ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
             >
-              Add Product
+              {loading ? (
+                <>
+                  <Loader2 className="w-5 h-5 animate-spin" />
+                  Adding Product...
+                </>
+              ) : (
+                "Add Product"
+              )}
             </button>
           </div>
         </form>
