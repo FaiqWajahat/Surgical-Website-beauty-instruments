@@ -22,9 +22,9 @@ import {
 import SectionHeading from './SectionHeading'
 
 // NOTE: prefer storing these in your .env.local as NEXT_PUBLIC_EMAILJS_*
-const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_tfeudsm'
-const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_cc7dlwa'
-const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'orBqo6XBefuVDVTrd'
+const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_2mo5jdb'
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_9sgsifq'
+const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'Wbo15OhIeUfyiWDD3'
 
 const ContactUs = ({getQuote}) => {
   const formRef = useRef(null)
